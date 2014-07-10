@@ -1,0 +1,21 @@
+/**
+ * Theme Name: Boletosdebus
+ * Theme URI: http://www.shopyourwebsite.com
+ * Description:  Customized template for boletosdebus.com
+ * Version: 1
+ * Author: nikeo
+ * Author URI: http://www.shohpyourwebsite.com
+ * Tags: gray, white, light, blue, red, yellow, green, purple, orange, black, one-column, two-columns, three-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, custom-menu, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
+ * Text Domain: customizr
+ * Copyright: (c) 2013 Nicolas GUILLAUME (nikeo), Nice, France
+ * License: GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+
+/**
+ * The styleheets of Customizr are located in inc/css. Each skin has its own stylesheet : blue.css, green.css, ...
+ *
+ * IMPORTANT : If you write your CSS code below, it will be deleted when you'll update the theme.
+ * If you want to style the css of Customizr, you can either use the Custom CSS section in the customizer (which will not be lost on update) OR create a child theme (recommended if you do many customizations) and add your css code in the style.css file of it.
+ */
