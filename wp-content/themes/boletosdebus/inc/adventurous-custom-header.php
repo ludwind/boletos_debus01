@@ -229,6 +229,8 @@ function adventurous_admin_header_style() {
 	</style>
 	<?php
 }
+
+
 endif; // adventurous_admin_header_style
 
 
@@ -248,56 +250,18 @@ function adventurous_header_image() {
 	
 	echo '<div id="header-left">';
 	
-		// Check Seconddary Menu 
-		if ( has_nav_menu( 'secondary' ) ) {
-    		echo '<div id="secondary-mobile-menu"><a href="#" class="mobile-nav closed"><span class="mobile-menu-bar"></span></a></div>';
-		}
-         
-		// Check Logo
-		if ( empty( $options['remove_header_logo'] ) ) { 
-
-			$sitedetails = 'logo-enable logo-left';
-			
-			// Check Logo URL
-			$adventurous_header_logo = '
-			<div id="site-logo">
-            	<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">';
-					
-					
-					if ( !empty( $options[ 'featured_logo_header' ] ) ) {
-						$adventurous_header_logo .= '<img src="' . esc_url( $options['featured_logo_header'] ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" />';
-					} else {
-						// if empty featured_logo_header on theme options, display default logo
-						$adventurous_header_logo .='<img src="' . esc_url( $defaults['featured_logo_header'] ) . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" />';
-					}
-					$adventurous_header_logo .= '
-				</a>
-			</div><!-- #site-logo -->';
-		}
-		else {
-			$sitedetails = 'logo-disable'; 
-			$adventurous_header_logo = '';	
-		}
-		
-		if ( 'blank' == get_header_textcolor() ) {
-			$sitedetails .= ' assistive-text';
-		}
-		
-		
-		// Checking Header Details
-		$adventurous_header_details = '
-		<div id="hgroup" class="' . $sitedetails . '">
-			<h1 id="site-title">
-				<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" rel="home">' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '</a>
-			</h1>
-			<h2 id="site-description"> ' . esc_attr( get_bloginfo( 'description', 'display' ) ) . '</h2>
-		</div><!-- #hgroup -->';  		
-		
-		echo $adventurous_header_logo;
-		echo $adventurous_header_details;
-		   
 		?>
 	</div><!-- #header-left"> -->
+        
+<! -------------------------- logo ------------------------- -->        
+
+<a href="<?php echo get_site_url(); ?>">
+<img class="logoboletos" src="<?php echo get_bloginfo('template_directory');?>/img/home/logo.png"/></a>
+
+
+
+        
+<! -------------------------- logo ------------------------- -->        
 <?php }
 endif; // adventurous_header_image
 

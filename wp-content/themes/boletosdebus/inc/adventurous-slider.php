@@ -54,7 +54,8 @@ function adventurous_default_sliders() {
         		<a class="slide-next"><span>Next</span></a>
         	</div>			
 			<div id="controllers"></div>
-		</div><!-- #main-slider -->';
+		</div><!-- #main-slider -->'
+		;
 			
 	set_transient( 'adventurous_default_sliders', $adventurous_default_sliders, 86940 );
 	}
@@ -256,3 +257,5 @@ function adventurous_slider_display() {
 endif; // adventurous_slider_display
 
 add_action( 'adventurous_before_main', 'adventurous_slider_display', 40 );
+
+

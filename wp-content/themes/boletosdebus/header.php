@@ -54,17 +54,8 @@ do_action( 'adventurous_before' ); ?>
     do_action( 'adventurous_before_header' ); ?>
     
 	<header id="masthead">
-    
-    	<?php 
-		/** 
-		 * adventurous_before_hgroup_wrap hook
-		 *
-		 * HOOKED_FUNCTION_NAME PRIORITY
-		 *
-		 * adventurous_promotion_display 20
-		 */
-		do_action( 'adventurous_before_hgroup_wrap' ); ?>
-        
+
+
     	<div id="hgroup-wrap" class="container">
         
        		<?php 
@@ -96,7 +87,8 @@ do_action( 'adventurous_before' ); ?>
     /** 
      * adventurous_after_header hook
      */
-    do_action( 'adventurous_after_header' ); ?> 
+    do_action( 'adventurous_after_header' ); ?>
+
     
     <div id="main-wrapper">
 		<?php 
@@ -134,3 +126,7 @@ do_action( 'adventurous_before' ); ?>
 			 * adventurous_breadcrumb_display 20
              */
             do_action( 'adventurous_content_sidebar' ); ?> 
+	    
+	    
+
+	    
