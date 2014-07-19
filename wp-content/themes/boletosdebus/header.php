@@ -82,13 +82,17 @@ do_action( 'adventurous_before' ); ?>
 		do_action( 'adventurous_after_hgroup_wrap' ); ?>
         
 	</header><!-- #masthead .site-header -->
-    
+
 	<?php 
     /** 
      * adventurous_after_header hook
      */
     do_action( 'adventurous_after_header' ); ?>
 
+    
+<div class="boletosdebussearch">
+<?php echo do_shortcode( '[acps id="33"]' ) ?>
+</div>
     
     <div id="main-wrapper">
 		<?php 
@@ -104,8 +108,8 @@ do_action( 'adventurous_before' ); ?>
          * adventurous_homepage_headline value after slider 60
          * adventurous_homepage_featured_display 80
          */
-        do_action( 'adventurous_before_main' ); ?>    
-        
+        do_action( 'adventurous_before_main' ); ?>
+	
 		<?php 
         /** 
          * adventurous_main hook

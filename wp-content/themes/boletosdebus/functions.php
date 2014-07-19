@@ -134,6 +134,8 @@ function adventurous_setup() {
 	add_image_size( 'featured', 800, 324, true); //Featured Image
 	add_image_size( 'small-featured', 400, 267, true); //Small Featured Image
 		
+		
+
 
 }
 endif; // adventurous_setup

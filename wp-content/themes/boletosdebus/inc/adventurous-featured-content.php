@@ -23,6 +23,9 @@ function adventurous_default_featured_content() {
 		}
 			
 		$adventurous_default_featured_content = '
+		
+		
+		
 		<div id="featured-post" class="' . $classes . '">
 			<section class="container" >
 				<div id="featured-heading">

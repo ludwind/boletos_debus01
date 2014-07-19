@@ -12,6 +12,16 @@ Text Domain: adventurous
 */
 
 
+
+/*------------------ Boletos de bus styles -----------------------*/
+
+.boletosdebussearch{ position: absolute; z-index: 999; opacity: 0.8;}
+
+
+
+
+
+
 /* =Reset
 -------------------------------------------------------------- */
 

@@ -258,4 +258,3 @@ endif; // adventurous_slider_display
 
 add_action( 'adventurous_before_main', 'adventurous_slider_display', 40 );
 
-
