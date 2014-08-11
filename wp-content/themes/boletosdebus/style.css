@@ -12,15 +12,161 @@ Text Domain: adventurous
 */
 
 
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('fonts/bebasneue-webfont.eot');
+    src: url('fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebasneue-webfont.woff') format('woff'),
+         url('fonts/bebasneue-webfont.ttf') format('truetype'),
+         url('fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'libel_suitregular';
+    src: url('fonts/libelsuit-webfont.eot');
+    src: url('fonts/libelsuit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/libelsuit-webfont.woff') format('woff'),
+         url('fonts/libelsuit-webfont.ttf') format('truetype'),
+         url('fonts/libelsuit-webfont.svg#libel_suitregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'champagne__limousinesbold';
+    src: url('fonts/champagne__limousines_bold-webfont.eot');
+    src: url('fonts/champagne__limousines_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/champagne__limousines_bold-webfont.woff') format('woff'),
+         url('fonts/champagne__limousines_bold-webfont.ttf') format('truetype'),
+         url('fonts/champagne__limousines_bold-webfont.svg#champagne__limousinesbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'champagne__limousinesregular';
+    src: url('fonts/champagne__limousines-webfont.eot');
+    src: url('fonts/champagne__limousines-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/champagne__limousines-webfont.woff') format('woff'),
+         url('fonts/champagne__limousines-webfont.ttf') format('truetype'),
+         url('fonts/champagne__limousines-webfont.svg#champagne__limousinesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*------------------ Boletos de bus styles ----------------------- */
+.logoboletos{margin: 10px 0;}
+/*------ Mainmenu ------ */
+.bmenuitems{ margin: 0 !important; padding-right: 0 !important; }
+.bmenuitems a{ color: #577f9f !important; font-family: 'champagne__limousinesbold'; font-size: 21px;
+padding: 39px 20px 18px !important; text-align: center; border-right: #ededed 1px solid;}
+.bmenuitems a:hover{-webkit-transition: all 500ms ease-in-out;-moz-transition: all 500ms ease-in-out;
+-ms-transition: all 500ms ease-in-out;-o-transition: all 500ms ease-in-out;transition: all 500ms ease-in-out;}
+.bmenubuses a{ background-image:url('img/home/menu-icon_buses.png'); background-repeat: no-repeat;
+ background-position: 24px 15px; border-top: solid 3px #f7fe2b;}
+	.bmenubuses a:hover{background-color: #f7fe2b;}
+.bmenutaxis a{background-image:url('img/home/menu-icon_taxi.png'); background-repeat: no-repeat;
+ background-position: 20px 15px; border-top: solid 3px #f3b116;}
+ 	.bmenutaxis a:hover{background-color: #f3b116;}
+.bmenuvuelos a{background-image:url('img/home/menu-icon_vuelos.png'); background-repeat: no-repeat;
+ background-position: 25px 15px; border-top: solid 3px #f57779;}
+ 	.bmenuvuelos a:hover{background-color: #f57779;}
+.bmenuautos a{background-image:url('img/home/menu-icon_autos.png'); background-repeat: no-repeat;
+ background-position: 22px 15px; border-top: solid 3px #bf86d8;}
+ 	.bmenuautos a:hover{background-color: #bf86d8;}
+.bmenuhoteles a{background-image:url('img/home/menu-icon_hotel.png'); background-repeat: no-repeat;
+ background-position: 28px 15px; border-top: solid 3px #33c5f6;}
+ 	.bmenuhoteles a:hover{background-color: #33c5f6;}
+.bmenusturisticos a{background-image:url('img/home/menu-icon_sitios.png'); background-repeat: no-repeat;
+ background-position: 65px 15px; border-top: solid 3px #7acf77;}
+ 	.bmenusturisticos a:hover{background-color: #7acf77;}
 
-/*------------------ Boletos de bus styles -----------------------*/
+/*------ Search ------ */
+.boletosdebussearch{ position: absolute; z-index: 100; opacity: 0.83; padding: 10px;
+	background-color: #fff; opacity: 0.8; -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.75); text-align: center; color:#a6a6a6;
+margin: 380px 0 0 14%;}
+.boletosdebussearch p{ display: inline-block !important; }
+.boletosdebussearch ul {margin: 0 auto}
+.boletosdebussearch ul li{ display: inline-block; margin: 0 20px 0 0}
+.boletosdebussearch h1{color:#febf2b; font-family: 'bebas_neueregular'; font-size: 28px; display: inline-block;}
+.boletosdebussearch h2{ color:#577f9f; font-family: 'libel_suitregular'; font-size: 25px; display: inline-block;}
 
-.boletosdebussearch{ position: absolute; z-index: 999; opacity: 0.8;}
+/*------ Ofertas especiales ------ */
+.ofertasespeciales{ margin: 80px 0 0;}
+.ofertasespeciales p {margin-bottom: 10px;}
+.ofertasespeciales h1{ color: #58809f; font-size: 35px; font-family: 'bebas_neueregular'; text-align: left;}
+.ofertasespeciales h2{ color: #58809f; font-size: 20px; font-family: 'bebas_neueregular'; text-align: left;}
+.linea-horizontal{ height: 2px; background-color: #ededed; width: 100%;}
+.ofertasespeciales h3 { color: #fecd5a; font-size: 20px; font-family: 'bebas_neueregular' !important;
+text-align: left; margin: 0; padding: 0;}
+.ofertasespeciales ul{ margin: 10px 0 0;}
+.ofertasespeciales ul li{ display: inline-block; border: solid 1px #ededed; width: 20%;
+	margin: 0 0 0 6%;}
+.ofertasespeciales ul li a{color: #a6a6a6;}
+.ofertasespeciales ul li:first-child{margin: 0;}
+.ofertasespeciales ul li article{padding: 10px 20px;}
+.viajarahora{ width: 95%; padding: 10px 0; text-align: center; font-size: 20px;
+font-family: 'bebas_neueregular'; color: #fff; background-color: #04a7ea; }
+.viajarahora span{ float: right; padding:10px; background-color: #2d6c9c; margin: -10px !important;}
 
+.espaciadorhome{ clear: both; width: 100%; height: 40px;}
 
+/*------ Los mejores hoteles ------ */
 
+.mejoreshoteles{ width: 65%;display: inline-block; float: left; margin:0 8% 0 0; }
+.mejoreshoteles ul { margin: 20px 0 0 0;}
+.mejoreshoteles ul li a{color: #a6a6a6;}
+.mejoreshoteles h1{ color: #58809f; font-size: 35px; font-family: 'bebas_neueregular'; text-align: left;}
+.mejoreshoteles h2{ color: #58809f; font-size: 20px; font-family: 'bebas_neueregular'; text-align: left;}
+.mejoreshoteles h3 { font-size: 20px; font-family: 'bebas_neueregular'; color:#7fe3d4; }
+.mejoreshoteles img {float:left; margin: 0 10px 0 0;}
+.vertodos{font-size: 25px; font-family: 'bebas_neueregular'; color: #fff; background-color:#04a7ea;
+	padding: 5px 20px;}
+	
+/*------ Top sitios turisticos ------ */
 
+.top-sitiosturisticos{ width: 25% !important; display: inline-block;float: left;}
+.top-sitiosturisticos ul { margin: 20px 0 0 0; }
+.top-sitiosturisticos ul li{}
+.top-sitiosturisticos ul li a{color: #a6a6a6;}
+.top-sitiosturisticos h1{ color: #58809f; font-size: 35px; font-family: 'bebas_neueregular'; text-align: left;}
+.top-sitiosturisticos h2{ color: #febf2b; font-size: 20px; font-family: 'bebas_neueregular'; text-align: left;}
+.top-sitiosturisticos h3 { font-size: 20px; font-family: 'bebas_neueregular'; color:#7fe3d4; }
+.vertodos2{font-size: 20px; font-family: 'bebas_neueregular'; color: #fff; background-color:#8fa7bb;
+	padding: 5px 20px;}
+.lineatopsitios{ margin: -11px 0 17px 0px !important;}
+	
+/*------ suscribete ------ */
+.suscribete{background-color:#fcc135; padding: 20px; width: 95%; margin: 0 auto 20px;}
+.suscribete ul li{ width: 40%; display: inline-table; margin: 0 1% 0 0; line-height: 12px;
+	vertical-align: middle}
+.suscribete ul li:first-child{ width: 45%;}
+.suscribete ul li:last-child{ width: 10%;}
+.suscribete h1{ color: #fff; font-size: 34px; font-family: 'bebas_neueregular'; text-align: left;
+	margin: 0; padding: 0;}
+.suscribete h2{ color: #58809f; font-size: 12px; text-align: left; margin: 0; padding: 0;}
+.suscribeteimput{ background-color: #fdd472; width: 100%; height: 20px;}
+.suscribetesend{font-size: 20px; font-family: 'bebas_neueregular'; color: #fff; background-color:#8fa7bb;
+	padding: 20px; float: right;}
 
+/*------ footer ------ */
+.footerboletos{padding: 20px 0; background-color: #f5f5f5; border-top:6px #e3e3e3 solid;
+	border-bottom:3px #e3e3e3 solid; margin: 20px 0 0 0; clear: both; color:#a6a6a6;}
+.footerboletos section {max-width: 1200px; margin: 0 auto;}
+.footerboletos ul{}
+.footerboletos ul li{width: 27%; margin: 0 2% 0 0; display: inline-block; padding: 0 2%;
+	vertical-align: top; line-height: 17px; }
+.footerboletos ul li:first-child{margin: 0 !important; text-align: justify;}
+.footerboletos ul li ul li{display: list-item; width: 100%; list-style: circle; padding: 0;}
+.footerboletos h1{color: #58809f;font-size: 34px; font-family: 'bebas_neueregular';
+	text-transform: uppercase; margin: 0; padding: 0;}
+
+.afterfooter-boletos{}
+.afterfooter-boletos section {max-width: 1200px; margin: 10px auto;}
+.afterfooter-boletos article{ float: right; color: #acacac;}
+.afterfooter-boletos aside a{ text-decoration: underline;color: #acacac !important;}
+.afterfooter-boletos h1{color: #58809f; font-size: 25px; font-family: 'bebas_neueregular';
+	text-transform: uppercase; display: inline-block;}
 
 /* =Reset
 -------------------------------------------------------------- */
@@ -143,7 +289,7 @@ a img {
 }
 
 #header-search:before {
-	content: "\f400";
+	content: url("img/home/search.png"); margin: 19px 0 0 6px;
 }
 .mobile-menu-bar:before {
 	content: "\f419";
@@ -203,7 +349,7 @@ a img {
 #header-right,
 #header-right .widget_nav_menu,
 #header-right .widget_search {
-	padding-top: 5px;
+	padding-top: 0;
 }
 .fixed-header #header-right {
 	padding-top: 0;
@@ -241,7 +387,7 @@ a img {
     padding: 30px 40px 20px;		
 }
 #masthead { 
-	padding-top: 15px;
+	padding-top: 0px;
 }
 #header-left {
 	padding-bottom: 15px;
@@ -391,7 +537,6 @@ textarea,
 ----------------------------------------------- */
 
 body {
-	background-color: #f9f9f9;
 }
 body,
 button,
@@ -2009,8 +2154,8 @@ ul.social-profile li.custom-social a img {
 	background-color: #222;
 }
 #site-generator {
-	background-color: #000;
-	color: #ccc;
+	background-color: #f5f5f5;
+	color: #8ca3b8;
 }
 #site-generator a {
 	color: #eee;

@@ -133,8 +133,8 @@ function adventurous_setup() {
 	add_image_size( 'slider', 1600, 600, true); //Featured Post Slider Image
 	add_image_size( 'featured', 800, 324, true); //Featured Image
 	add_image_size( 'small-featured', 400, 267, true); //Small Featured Image
-		
-		
+	add_image_size( 'bdb-ofertasimg', 270, 195, true );		
+	add_image_size( 'bdb-mejoreshotelesimg', 265, 190, true );	
 
 
 }

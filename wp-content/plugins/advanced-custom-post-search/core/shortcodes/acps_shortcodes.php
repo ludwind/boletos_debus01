@@ -24,6 +24,9 @@ class acps_shortcodes
 		{
 			//Restruct variable name
 			$post_id = $id;
+
+			//Grab $_POST data if exists
+			$post_data = ($_POST['acps_post_type']) ? $_POST : array();
 			
 			//Get all data
 			$acps_post_meta = apply_filters( 'acps/get_meta_data', $post_id );
@@ -170,6 +173,7 @@ class acps_shortcodes
 				//Start Return html
 				$acps_html = '<form role="search" method="post" id="acps_form_'.$post_id.'" class="acps_form" action="'.$acps_results_page_link.'" >';
 				$acps_html .= '<input type="hidden" name="acps_post_type" value="'.$acps_post_type.'" />';
+				$acps_html .= '<input type="hidden" name="acps_form_id" value="'.$post_id.'" />';
 				
 				if($acps_form_title && $acps_title_position == 'outside' )
 				{
@@ -206,7 +210,14 @@ class acps_shortcodes
 					{
 						$acps_keyword_form_value = '';
 					}
-					$acps_html .= '<input class="acps_text_input" type="text" placeholder="'.$acps_keyword_form_value.'" name="keywords"/>';
+					if( isset($_POST['keywords']) )
+					{
+						$acps_html .= '<input class="acps_text_input" type="text" value="'.$_POST['keywords'].'" placeholder="'.$acps_keyword_form_value.'" name="keywords"/>';
+					}
+					else
+					{
+						$acps_html .= '<input class="acps_text_input" type="text" placeholder="'.$acps_keyword_form_value.'" name="keywords"/>';
+					}
 					$acps_html .= '</span>';
 					$acps_html .= '</p>';	
 				}
@@ -234,11 +245,18 @@ class acps_shortcodes
 						$acps_html .= '<select name="'.$value.'">';
 						if($acps_blank_term)
 						{
-							$acps_html .= '<option value="">Select '.$key.'...</option>';
+							$acps_html .= '<option value="">'.__('Select', 'acps').' '.$key.'...</option>';
 						}
 						foreach($acps_taxonomy_terms as $acps_taxonomy_term)
 						{
-							$acps_html .= '<option value="'.$acps_taxonomy_term->slug.'">'.$acps_taxonomy_term->name.'</option>';
+							if( $post_data[$value] == $acps_taxonomy_term->slug )
+							{
+								$acps_html .= '<option selected="selected" value="'.$acps_taxonomy_term->slug.'">'.$acps_taxonomy_term->name.'</option>';
+							}
+							else
+							{
+								$acps_html .= '<option value="'.$acps_taxonomy_term->slug.'">'.$acps_taxonomy_term->name.'</option>';
+							}
 						}
 						$acps_html .= '</select>';
 						$acps_html .= '</span>';

@@ -488,4 +488,5 @@ function adventurous_featured_overall_image() {
 endif;
 
 
-add_action( 'adventurous_before_main', 'adventurous_featured_overall_image', 5 );
+add_action( 'adventurous_before_main', 'adventurous_featured_overall_image', 5 );?>
+

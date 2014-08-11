@@ -90,9 +90,16 @@ do_action( 'adventurous_before' ); ?>
     do_action( 'adventurous_after_header' ); ?>
 
     
-<div class="boletosdebussearch">
+<?php if(is_page(39)): ?>
+<div class="boletosdebussearch"><ul>
+<li><h1>01.</h1><h2>&iquest;Hacia donde te dirijes?</h2></li>
+<li><h1>02.</h1><h2>&iquest;Desde d&oacute;nde viajas?</h2></li>
+<li><h1>03.</h1><h2>&iquest;Cu&aacute;ndo?</h2></li>
+<li><h1>04.</h1><h2>&iquest;Quienes viajar&aacute;n?</h2></li>
+</ul>
 <?php echo do_shortcode( '[acps id="33"]' ) ?>
 </div>
+<?php endif; ?> 
     
     <div id="main-wrapper">
 		<?php 
@@ -109,7 +116,7 @@ do_action( 'adventurous_before' ); ?>
          * adventurous_homepage_featured_display 80
          */
         do_action( 'adventurous_before_main' ); ?>
-	
+
 		<?php 
         /** 
          * adventurous_main hook
@@ -119,7 +126,7 @@ do_action( 'adventurous_before' ); ?>
          * adventurous_main_wrapper 10
          */
         do_action( 'adventurous_main' ); ?> 
-                 
+                
 			<?php 
             /** 
              * adventurous_content_sidebar hook
@@ -129,7 +136,9 @@ do_action( 'adventurous_before' ); ?>
              * adventurous_content_sidebar_wrapper 10
 			 * adventurous_breadcrumb_display 20
              */
-            do_action( 'adventurous_content_sidebar' ); ?> 
+            do_action( 'adventurous_content_sidebar' ); ?>
+	    
+    
 	    
 	    
 

@@ -84,6 +84,8 @@ function acps_body_class($classes)
 	
 	//Add to existing classes
 	$classes[] = 'acps_results_archive';
+	$classes[] = 'search';
+	$classes[] = 'search_results';
 	
 	//Return the classes array
 	return $classes;

@@ -3,8 +3,8 @@ Contributors: shane-welland, CreareGroup
 Donate link: http://www.creare.co.uk/
 Tags: search, form, taxonomies, custom post type, taxonomy filter
 Requires at least: 3.0.0
-Tested up to: 3.8.0
-Stable tag: 1.2.1
+Tested up to: 3.9.1
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,18 @@ Since version 1.1 you can use the built in form style option which can be found 
 4. Here is a typical results page, also demonstrated in the ‘twentyfourteen’ theme.
 
 == Changelog ==
+
+= 1.2.3 =
+* [Added] Translation support for taxonomy term dropdowns
+
+= 1.2.2 =
+* [Added] ACPS Search form now included when no results are found instead of the default WordPress form
+* [Fixed] Support for child themes
+* [Added] Additional body tag classes to search results page to mimic WordPress' own
+* [Added] Post Count details in results page title
+* [Added] Remembered search term on forms (if using plugin as a 'filter')
+* [Added] Remembered taxonomy term on forms (if using plugin as a 'filter')
+* [Added] Filter to $acps_args variable declaration
 
 = 1.2.1 =
 * [Added] Additional select option to search all term in selected taxonomies

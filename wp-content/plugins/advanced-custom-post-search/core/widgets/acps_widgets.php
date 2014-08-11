@@ -7,8 +7,8 @@ class acps_widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'acps_widget',
-			__('Advanced Custom Post Search', 'text_domain'),
-			array( 'description' => __( 'An Advanced Custom Post Search Widget', 'text_domain' ), )
+			__('Advanced Custom Post Search', 'acps'),
+			array( 'description' => __( 'An Advanced Custom Post Search Widget', 'acps' ), )
 		);
 		
 	}
@@ -18,7 +18,11 @@ class acps_widget extends WP_Widget {
 		
 	//Get widget settings
 	$post_id = apply_filters( 'widget_title', $instance[ 'acps_post_id' ] );
-	
+
+	$acps_post_type = (isset($_POST['acps_post_type'])) ? $_POST['acps_post_type'] : false;
+	$acps_keyword = (isset($_POST['keywords'])) ? $_POST['acps_post_type'] : false;
+	$post_data = ($_POST['acps_post_type']) ? $_POST : array();
+
 	if($post_id != false)
 	{
 		//Get all data
@@ -160,7 +164,8 @@ class acps_widget extends WP_Widget {
 			$acps_html = $args['before_widget'];
 			$acps_html .= '<form role="search" method="post" id="acps_form_'.$post_id.'" class="acps_form acps_widget" action="'.$acps_results_page_link.'" >';
 			$acps_html .= '<input type="hidden" name="acps_post_type" value="'.$acps_post_type.'" />';
-			
+			$acps_html .= '<input type="hidden" name="acps_form_id" value="'.$instance[ 'acps_post_id' ].'" />';
+
 			if($acps_form_title && $acps_title_position == 'outside' )
 			{
 				$acps_html .= '<h3 class="widget-title acps_title">'.$acps_form_title.'</h3>';
@@ -196,7 +201,14 @@ class acps_widget extends WP_Widget {
 				{
 					$acps_keyword_form_value = '';
 				}
-				$acps_html .= '<input class="acps_text_input" type="text" placeholder="'.$acps_keyword_form_value.'" name="keywords"/>';
+				if( isset($_POST['keywords']) )
+				{
+					$acps_html .= '<input class="acps_text_input" type="text" value="'.$_POST['keywords'].'" placeholder="'.$acps_keyword_form_value.'" name="keywords"/>';
+				}
+				else
+				{
+					$acps_html .= '<input class="acps_text_input" type="text" placeholder="'.$acps_keyword_form_value.'" name="keywords"/>';
+				}
 				$acps_html .= '</span>';
 				$acps_html .= '</p>';	
 			}
@@ -222,11 +234,18 @@ class acps_widget extends WP_Widget {
 				$acps_html .= '<select name="'.$value.'">';
 				if($acps_blank_term)
 						{
-							$acps_html .= '<option value="">Select '.$key.'...</option>';
+							$acps_html .= '<option value="">'.__('Select', 'acps').' '.$key.'...</option>';
 						}
 				foreach($acps_taxonomy_terms as $acps_taxonomy_term)
 				{
-					$acps_html .= '<option value="'.$acps_taxonomy_term->slug.'">'.$acps_taxonomy_term->name.'</option>';
+					if( $post_data[$value] == $acps_taxonomy_term->slug )
+					{
+						$acps_html .= '<option selected="selected" value="'.$acps_taxonomy_term->slug.'">'.$acps_taxonomy_term->name.'</option>';
+					}
+					else
+					{
+						$acps_html .= '<option value="'.$acps_taxonomy_term->slug.'">'.$acps_taxonomy_term->name.'</option>';
+					}
 				}
 				$acps_html .= '</select>';
 				$acps_html .= '</span>';

@@ -17,6 +17,7 @@ class acps_results
 	var $acps_args;
 	var $acps_style_options;
 	var $acps_keyword_input;
+	var $acps_form_id;
 	
 	//Get data send through url (form data)
 	function acps_get_data()
@@ -50,6 +51,11 @@ class acps_results
 					elseif( $k == 'keywords' )
 					{
 						$this->acps_keyword_input = $v;
+					}
+					//Get form ID for shortcode
+					elseif( $k == 'acps_form_id' )
+					{
+						$this->acps_form_id = $v;
 					}
 					//Save rest of data for tax query
 					else
@@ -106,11 +112,11 @@ class acps_results
 		}
 		
 		//Save all args to main variable
-		$this->acps_args = array(
-			'post_type' => $this->acps_post_type,
-			's' => $this->acps_keyword_input,
-			'tax_query' => $acps_tax_args
-		);
+		$this->acps_args = apply_filters('acps/query_args', array(
+		  'post_type' => $this->acps_post_type,
+		  's' => $this->acps_keyword_input,
+		  'tax_query' => $acps_tax_args,
+		));
 		
 		//Setup wrapper
 		echo '<div class="acps_results">';

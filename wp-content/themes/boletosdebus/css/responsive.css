@@ -80,7 +80,7 @@
 	}
 	#primary {
 		width: 770px;		
-	}	
+	}
 }
 
 
@@ -93,6 +93,7 @@
 	#primary {
 		width: 690px;
 	}
+.boletosdebussearch{margin: 313px 0 0 14%;}
 }
 
 
@@ -105,6 +106,7 @@
 	#primary {
 		width: 570px;
 	}
+.ofertasespeciales ul li{width: 19%;}	
 }
 
 
@@ -192,7 +194,9 @@
 	}	
 	#homepage-message .right-section a {
 		padding: 5px 20px;	
-	}	
+	}
+	
+
 }
 
 

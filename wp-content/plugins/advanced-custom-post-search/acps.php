@@ -3,7 +3,7 @@
 * Plugin Name: Advanced Custom Post Search
 * Plugin URI: http://www.creare.co.uk
 * Description: A useful plugin for creating advanced post searches for custom post types & taxonomies.
-* Version: 1.2.1
+* Version: 1.2.3
 * Author: Shane Welland
 * License: GPL2
 */
@@ -46,10 +46,10 @@ class acps
 		$this->settings = array(
 			'path' => apply_filters('acps/helpers/get_path', __FILE__),
 			'dir' => apply_filters('acps/helpers/get_dir', __FILE__),
-			'template_path' => trailingslashit(get_template_directory()),
+			'template_path' => trailingslashit(get_stylesheet_directory()),
 			'hook' => basename( dirname( __FILE__ ) ) . '/' . basename( __FILE__ ),
-			'version' => '1.2.1',
-			'upgrade_version' => '1.2.1'
+			'version' => '1.2.3',
+			'upgrade_version' => '1.2.3'
 		);
 		
 		//Register Search Page on activation
