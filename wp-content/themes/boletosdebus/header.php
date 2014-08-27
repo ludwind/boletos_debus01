@@ -97,7 +97,28 @@ do_action( 'adventurous_before' ); ?>
 <li><h1>03.</h1><h2>&iquest;Cu&aacute;ndo?</h2></li>
 <li><h1>04.</h1><h2>&iquest;Quienes viajar&aacute;n?</h2></li>
 </ul>
-<?php echo do_shortcode( '[acps id="33"]' ) ?>
+
+
+
+
+<form  method="post" action="<?php bloginfo('url');?>/listing-search-results/"> 
+<?php  $taxonomies = get_object_taxonomies('boletos-bus');
+    foreach($taxonomies as $tax){
+        echo buildSelect($tax);
+    }
+?>
+<input type="submit"/>	
+</form>
+	
+<!--<form role="search" method="get" id="searchform" class="searchform" action="<?php esc_url( home_url( '/' ) ); ?>">
+<div>
+	<label class="screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
+	<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" />
+	<input type="submit" id="searchsubmit" value="<?php esc_attr_x( 'Search', 'submit button' ); ?>" />
+</div>
+</form>-->
+	
+<?php /**echo do_shortcode( '[acps id="33"]' ) */?>
 </div>
 <?php endif; ?> 
     

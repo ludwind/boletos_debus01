@@ -255,9 +255,9 @@ function adventurous_header_image() {
         
 <! -------------------------- logo ------------------------- -->        
 
-<a href="<?php echo get_site_url(); ?>">
+<!--<a href="<?php echo get_site_url(); ?>">
 <img class="logoboletos" src="<?php echo get_bloginfo('template_directory');?>/img/home/logo.png"/></a>
-
+-->
 
 
         

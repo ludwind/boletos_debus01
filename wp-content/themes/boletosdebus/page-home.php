@@ -18,6 +18,8 @@ Template Name: BDB-Inicio
  */
 get_header(); ?>
 
+
+
 <!-- ----------------- ofertas especiales home -------------------------- -->
 <div class="ofertasespeciales">
 	<h1>Ofertas especiales</h1><div class="linea-horizontal"></div>

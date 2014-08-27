@@ -17,6 +17,8 @@ if ( ! function_exists( 'adventurous_setup' ) ) :
  *
  * @since Adventurous 1.0
  */
+ 
+ 
 function adventurous_setup() {
 	
 	global $content_width;
@@ -136,6 +138,20 @@ function adventurous_setup() {
 	add_image_size( 'bdb-ofertasimg', 270, 195, true );		
 	add_image_size( 'bdb-mejoreshotelesimg', 265, 190, true );	
 
+function buildSelect($tax){	
+	$terms = get_terms($tax);
+	$x = '<select name="'. $tax .'">';
+	$x .= '<option value="">Select '. ucfirst($tax) .'</option>';
+	foreach ($terms as $term) {
+	   $x .= '<option value="' . $term->slug . '">' . $term->name . '</option>';	
+	}
+	$x .= '</select>';
+	return $x;
+}
+
+
+
+
 
 }
 endif; // adventurous_setup
@@ -146,3 +162,6 @@ add_action( 'after_setup_theme', 'adventurous_setup' );
  * Implement the Custom Header feature
  */
 require( get_template_directory() . '/inc/adventurous-custom-header.php' );
+
+
+

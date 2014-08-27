@@ -45,7 +45,7 @@
 		boletosdebus.com para cualquier destino al que desee viajar, pudiendo ser
 		desde y hacia cualquier parte en Norte, Centro y pr&oacute;ximamente Sur Am&eacute;rica.
 	</li>
-	<li>
+	<li class="fporquereservar">
 		<h1>&#191;porqu&eacute; reservar?</h1><br>
 		<ul>
 			<li><h2>La mejor reserva en l&iacute;nea de Latinoam&eacute;rica</h2><br>

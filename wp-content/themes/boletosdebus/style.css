@@ -168,6 +168,11 @@ font-family: 'bebas_neueregular'; color: #fff; background-color: #04a7ea; }
 .afterfooter-boletos h1{color: #58809f; font-size: 25px; font-family: 'bebas_neueregular';
 	text-transform: uppercase; display: inline-block;}
 
+.fporquereservar {}
+.fporquereservar li{background: url("images/social-profile.png") no-repeat;}
+.fporquereservar li:firstchild{}
+.fporquereservar li:lastchild{}
+
 /* =Reset
 -------------------------------------------------------------- */
 
