@@ -48,32 +48,34 @@
 	<li class="fporquereservar">
 		<h1>&#191;porqu&eacute; reservar?</h1><br>
 		<ul>
-			<li><h2>La mejor reserva en l&iacute;nea de Latinoam&eacute;rica</h2><br>
+			<li><h2>La mejor reserva en l&iacute;nea de Latinoam&eacute;rica</h2>
 			Nuestro sitio web cuenta con la mejor plataformade res&eacute;rva
 			en l&iacute;nea de latinoam&eacute;rica.</li>
-			<li><h2>Te llevamos a donde necesitas</h2><br>
+			<li><h2>Te llevamos a donde necesitas</h2>
 			S&oacute;lo en boletosdebus.com podr&aacute;s encontrar los mejores destinos
 			p&oacute;ara viajar en bus y reservar en l&iacute;nea</li>
-			<li><h2>Atenci&oacute;n al cliente personalizada</h2><br>
+			<li><h2>Atenci&oacute;n al cliente personalizada</h2>
 			Todo nuestro personal est&aacute; capacitado para darte la mejor atenci&oacute;n
 			que puedas tener, informaci&oacute;n completa y objetiva</li>
 		</ul>
 	</li>
 	<li>
 		<h1>encu&eacute;ntranos</h1><br>
-		<ul>
+		<ul class="fencuentranos">
 			<li>Guatemala, Via 2 4-44 Zona 4 Ciudad Guatemala</li>
 			<li>El Salvador, Juan Pablo II y 19 Ave. Norte Local 7</li>
 			<li>Los &#193;ngeles 1926 W. Olympic Blvd. Los &#193;ngeles CA 90006</li>
 			<li>PACOIMA. 9760 Laurerl cyn Blvd</li>
 			<li>Santa Ana, Ca.305 E. 17th Street Santa Ana Ca.</li>
 		</ul>
-		<span>(213) 368 1172 - (503) 2222-8500 - (502) 2361-1403 </span>
-		<article><img src="wp-content/themes/boletosdebus/img/home/foot-fb.png"/></article>
-		<article><img src="wp-content/themes/boletosdebus/img/home/foot-g.png"/></article>
-		<article><img src="wp-content/themes/boletosdebus/img/home/foot-rss.png"/></article>
-		<article><img src="wp-content/themes/boletosdebus/img/home/foot-pint.png"/></article>
-		<article><img src="wp-content/themes/boletosdebus/img/home/foot-in.png"/></article>
+		<div class="ftels">(213) 368 1172 - (503) 2222-8500 - (502) 2361-1403 </div>
+		<div class="redesfooter">
+<article><a target="_new" href="https://facebook.com/"><img src="<?php echo get_template_directory_uri(); ?>/img/home/fredes1.png"/></a></article>
+<article><a target="_new" href="https://plus.google.com/"><img src="<?php echo get_template_directory_uri(); ?>/img/home/fredes2.png"/></a></article>
+<article><a target="_new" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/home/fredes3.png"/></a></article>
+<article><a target="_new" href="https://www.pinterest.com/"><img src="<?php echo get_template_directory_uri(); ?>/img/home/fredes4.png"/></a></article>
+<article><a target="_new" href="https://www.linkedin.com/"><img src="<?php echo get_template_directory_uri(); ?>/img/home/fredes5.png"/></a></article>
+		</div>
 	</li>
 </ul></section></div>
 

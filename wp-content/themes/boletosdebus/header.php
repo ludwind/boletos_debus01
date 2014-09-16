@@ -30,6 +30,7 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.min.js"></script>
 	<![endif]-->
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 <?php wp_head(); ?>
 </head>
 
@@ -98,19 +99,20 @@ do_action( 'adventurous_before' ); ?>
 <li><h1>04.</h1><h2>&iquest;Quienes viajar&aacute;n?</h2></li>
 </ul>
 
+<?php echo do_shortcode( '[search-form id="1"]' ) ?>
 
 
-
-<form  method="post" action="<?php bloginfo('url');?>/listing-search-results/"> 
-<?php  $taxonomies = get_object_taxonomies('boletos-bus');
+<!--
+<form  method="post" action="<?php //bloginfo('url');?>/listing-search-results/"> 
+<?php  /**$taxonomies = get_object_taxonomies('boletos-bus');
     foreach($taxonomies as $tax){
         echo buildSelect($tax);
-    }
+    }**/
 ?>
 <input type="submit"/>	
 </form>
 	
-<!--<form role="search" method="get" id="searchform" class="searchform" action="<?php esc_url( home_url( '/' ) ); ?>">
+<form role="search" method="get" id="searchform" class="searchform" action="<?php esc_url( home_url( '/' ) ); ?>">
 <div>
 	<label class="screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
 	<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" />

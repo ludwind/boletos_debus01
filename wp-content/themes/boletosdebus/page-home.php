@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: BDB-Inicio
+Template Name: Inicio
 */
 
 /**
@@ -32,6 +32,7 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <article><h2><?php the_title(); ?></h2>
 <?php global $more; $more = 0; ?>
 <?php the_content(''); ?>
+<h3>desde $<?php the_field('precio_de_oferta-viajes-ofertas'); ?></h3>
 </article>
 <div class="viajarahora">Viajar ahora<span>></span></div>
 </a></li>
@@ -52,19 +53,20 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <li><a href="<?php the_permalink(); ?>">
 <?php the_post_thumbnail( 'bdb-mejoreshotelesimg', array( 'class' => 'featured-img' ) ); ?>
 <article><h2><?php the_title(); ?></h2>
+<h3>desde $<?php the_field('precio_desde'); ?> / noche</h3>	
 <?php global $more; $more = 0; ?>
 <?php the_content(''); ?>
 </article>
 </a></li>
 <?php endforeach; wp_reset_postdata();?>
 </ul>
-<a href="#" class="vertodos">ver todos los hoteles</a>
+<a href="?cat=11" class="vertodos">ver todos los hoteles</a>
 </div>
 <!-- ----------------- Fin Los mejores hoteles ---------------------- -->
 
-<!-- ----------------- Los mejores hoteles -------------------------- -->
+<!-- ----------------- Top sitios turisticos -------------------------- -->
 <div class="top-sitiosturisticos">
-	<h1>Los mejores hoteles</h1><div class="linea-horizontal"></div>
+	<h1>Top sitio tur&iacute;sticos</h1><div class="linea-horizontal"></div>
 <ul><?php $args = array( 'posts_per_page' => 7, 'offset'=> 0, 'category' => 12 );
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
@@ -77,7 +79,7 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <div class="linea-horizontal lineatopsitios"></div>
 <?php endforeach; wp_reset_postdata();?>
 </ul>
-<a href="#" class="vertodos2">ver todos los sitios turisticos</a>
+<a href="?cat=12" class="vertodos2">ver todos los sitios turisticos</a>
 </div>
 <!-- ----------------- Fin Los mejores hoteles ---------------------- -->
 <div class="espaciadorhome"></div>
