@@ -248,6 +248,25 @@ font-family: 'bebas_neueregular'; color: #fff; background-color: #04a7ea; float:
 /*------ hotel category layout ------ */
 
 .heroimageboletos{margin: 0 auto; text-align: center;}
+.hotelesearch {margin:-80px auto 0; max-width: 650px; float: inherit; position: relative;
+	z-index: 100; opacity: 0.83; padding: 10px 10px 25px 25px;
+	background-color: #fff; opacity: 0.85; -webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	text-align: center; color:#a6a6a6; width: 925px;
+}
+.hotelesearch h1{ color:#577f9f; font-family:'bebas_neueregular'; font-size: 44px;display: inline-block;
+	margin: 0 0 0 4px;text-transform: uppercase; }
+.buscar-searchoteles { margin: 17px 33% 2px;}
+.buscar-searchoteles input{ background:#04a7ea !important; clear: none; color: #fff !important;
+    float: inherit; font-family: "libel_suitregular"; font-size: 24px;float: left;
+    padding: 2px 43px !important; text-align: center; font-size: 26px !important;}
+.boletosearch span{ background-color: #2d6c9c; color: #fff; float: left; font-size: 21px;
+    margin: 0 !important; padding: 5px 12px;}
+
+.boletosearch{}
+.boletosearch select{color:#a6a6a6;font-family: 'libel_suitregular'; font-size: 18px; }
+
 
 
 /* =Reset

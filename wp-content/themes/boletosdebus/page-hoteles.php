@@ -22,11 +22,38 @@ get_header(); ?>
 
 <div class="heroimageboletos"><img src="<?php echo get_bloginfo('template_directory');?>/img/hoteles/head.jpg"/></div>
 
-<div class="boletosdebussearch hotelesearch"><ul>
-<li><h2>¿en donde nos hospedaremos hoy?</h2></li>
-</ul>
-</div>
+<div class="hotelesearch">
+<h1>&#191;en donde nos hospedaremos hoy?</h1>
 
+<FORM name="boletosearchf" class="boletosearch"> 
+<SELECT name="boletosearchs"> 
+	<option selected>Selecciona un pa&#237;s</option> 
+	<option value="?p=56">Guatemala</option>
+	<option value="?p=56">El Salvador</option>
+	<option value="?p=56">Honduras</option>
+	<option value="?p=56">Nicaragua</option>
+	<option value="?p=56">Costa Rica</option>
+	<option value="?p=56">Panama</option>
+</SELECT>
+<section class="buscar-searchoteles">
+<INPUT type="button" name="go" value="ver hoteles" 
+       onClick="window.location=document.boletosearchf.boletosearchs.options[document.boletosearchf.boletosearchs.selectedIndex].value">
+<span>&gt;</span></section>
+</FORM> 
+
+</div>
+<div class="container" id="content-sidebar">	    
+    
+<?php $args = array(
+	'posts_per_page' => 1,
+	'post__in'  => get_option('sticky_posts'),
+	'caller_get_posts' => 1,
+	'category__not_in' => array(12,3)
+);
+query_posts($args);?>
+	<?php while (have_posts()) : the_post(); $do_not_duplicate = $post->ID; ?>    
+    
+    
 
 <!-- ----------------- ofertas especiales home -------------------------- -->
 <div class="ofertasespeciales">
