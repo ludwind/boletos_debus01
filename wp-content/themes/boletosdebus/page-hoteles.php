@@ -18,6 +18,8 @@ Template Name: Hoteles
  */
 get_header(); ?>
 
+
+
 </div>
 
 <div class="heroimageboletos"><img src="<?php echo get_bloginfo('template_directory');?>/img/hoteles/head.jpg"/></div>
@@ -28,12 +30,12 @@ get_header(); ?>
 <FORM name="boletosearchf" class="boletosearch"> 
 <SELECT name="boletosearchs"> 
 	<option selected>Selecciona un pa&#237;s</option> 
-	<option value="?p=56">Guatemala</option>
-	<option value="?p=56">El Salvador</option>
-	<option value="?p=56">Honduras</option>
-	<option value="?p=56">Nicaragua</option>
-	<option value="?p=56">Costa Rica</option>
-	<option value="?p=56">Panama</option>
+	<option value="?cat=16">Guatemala</option>
+	<option value="?cat=20">El Salvador</option>
+	<option value="?cat=18">Honduras</option>
+	<option value="?cat=28">Nicaragua</option>
+	<option value="?cat=28">Costa Rica</option>
+	<option value="?cat=30">Panamá</option>
 </SELECT>
 <section class="buscar-searchoteles">
 <INPUT type="button" name="go" value="ver hoteles" 
@@ -44,58 +46,71 @@ get_header(); ?>
 </div>
 <div class="container" id="content-sidebar">	    
     
-<?php $args = array(
-	'posts_per_page' => 1,
-	'post__in'  => get_option('sticky_posts'),
-	'caller_get_posts' => 1,
-	'category__not_in' => array(12,3)
-);
-query_posts($args);?>
-	<?php while (have_posts()) : the_post(); $do_not_duplicate = $post->ID; ?>    
-    
-    
 
-<!-- ----------------- ofertas especiales home -------------------------- -->
-<div class="ofertasespeciales">
-	<h1>Ofertas especiales</h1><div class="linea-horizontal"></div>
-<ul><?php
-$args = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => 10 );
-$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+
+<div class="todosloshoteles">
+	<h1>todos los hoteles</h1><div class="linea-horizontal"></div>
+<ul>
+<?php $cat = array(20,16,18,22,); $showposts = 25; $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;        $args=array(
+        'category__in' => $cat, 'showposts' => $showposts, 'paged' => $paged, 'orderby' => 'post_date',
+        'order' => 'DESC', 'post_status' => 'publish',  );  $the_query = new WP_Query ( $args ); //the query
+        $i = 0;while ($the_query->have_posts() ) : $the_query->the_post(); //start the loop ?>
+<?php if($i==0){ //Sets the output for the top post ?>  
+
+<li><a href="<?php the_permalink(); ?>">
+<?php the_post_thumbnail( 'bdb-ofertasimg', array( 'class' => 'featured-img' ) ); ?>
+<article><h2><?php the_title(); ?></h2>	
+
+<?php foreach((get_the_category()) as $category) { echo '<a href="'.get_category_link( $category->term_id ).
+ '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.', </a>';} ?>	
+	
+<?php $content = get_the_content(); $trimmed_content = wp_trim_words( $content, 15 ); ?>
+<p><?php echo $trimmed_content; ?></p>
+<h3>desde $<?php the_field('precio_desde'); ?> / noche</h3>	
+</article>
+<div class="viajarahora">Ver m&aacute;s<span>></span></div>
+</a></li>
+
+<?php  $i++; } else { ?>
+
 <li><a href="<?php the_permalink(); ?>">
 <?php the_post_thumbnail( 'bdb-ofertasimg', array( 'class' => 'featured-img' ) ); ?>
 <article><h2><?php the_title(); ?></h2>
-<?php global $more; $more = 0; ?>
-<?php the_content(''); ?>
-<h3>desde $<?php the_field('precio_de_oferta-viajes-ofertas'); ?></h3>
+
+<?php foreach((get_the_category()) as $category) { echo '<a href="'.get_category_link( $category->term_id ).
+ '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.', </a>';} ?>
+	
+<?php $content = get_the_content(); $trimmed_content = wp_trim_words( $content, 15 ); ?>
+<p><?php echo $trimmed_content; ?></p>
+<h3>desde $<?php the_field('precio_desde'); ?> / noche</h3>	
 </article>
-<div class="viajarahora">Viajar ahora<span>></span></div>
-</a></li>
-<?php endforeach; wp_reset_postdata();?>
-</ul>
-</div>
-
+<div class="viajarahora">Ver m&aacute;s<span>></span></div>
+</a></li>	   
+	   
+<?php } endwhile; //end of the loop ?><?php wp_reset_postdata(); // reset the query ?>
+</ul></div>
 <div class="espaciadorhome"></div>
-<!-- ----------------- fin ofertas especiales home -------------------- -->
 
-<!-- ----------------- Los mejores hoteles -------------------------- -->
+
+<!-- ----------------- autos para tu viaje -------------------------- -->
 <div class="mejoreshoteles">
-	<h1>Los mejores hoteles</h1><div class="linea-horizontal"></div>
+	<h1>Autos para tu viaje</h1><div class="linea-horizontal"></div>
 <ul><?php
-$args = array( 'posts_per_page' => 3, 'offset'=> 0, 'category' => 11 );
+$args = array( 'posts_per_page' => 3, 'offset'=> 0, 'category' => 24 );
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <li><a href="<?php the_permalink(); ?>">
 <?php the_post_thumbnail( 'bdb-mejoreshotelesimg', array( 'class' => 'featured-img' ) ); ?>
 <article><h2><?php the_title(); ?></h2>
-<h3>desde $<?php the_field('precio_desde'); ?> / noche</h3>	
+<h3>desde $<?php the_field('precio_desde'); ?> / d&iacute;a</h3>	
 <?php global $more; $more = 0; ?>
 <?php the_content(''); ?>
 </article>
 </a></li>
 <?php endforeach; wp_reset_postdata();?>
 </ul>
-<a href="?cat=11" class="vertodos">ver todos los hoteles</a>
+<a href="?cat=11" class="vertodos">ver todos los autos</a>
 </div>
 <!-- ----------------- Fin Los mejores hoteles ---------------------- -->
 

@@ -267,6 +267,20 @@ font-family: 'bebas_neueregular'; color: #fff; background-color: #04a7ea; float:
 .boletosearch{}
 .boletosearch select{color:#a6a6a6;font-family: 'libel_suitregular'; font-size: 18px; }
 
+.todosloshoteles{ margin:30px 0 0;}
+.todosloshoteles p {margin-bottom: 10px;}
+.todosloshoteles h1{ color: #58809f; font-size: 35px; font-family: 'bebas_neueregular'; text-align: left;}
+.todosloshoteles h2{ color: #58809f; font-size: 20px; font-family: 'bebas_neueregular';
+	text-align: left; line-height: 20px; min-height: 47px;}
+.todosloshoteles h3 { color: #fecd5a; font-size: 20px; font-family: 'bebas_neueregular' !important;
+text-align: left; margin: 0; padding: 0;}
+.todosloshoteles ul{ margin: 10px 0 0;}
+.todosloshoteles ul li{ display: inline-block; border: solid 1px #ededed; width: 20%;
+	margin: 20px 2%;}
+.todosloshoteles ul li a{color: #a6a6a6;}
+.todosloshoteles ul li article{padding: 10px 20px;}
+
+
 
 
 /* =Reset
