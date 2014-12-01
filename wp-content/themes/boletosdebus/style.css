@@ -78,6 +78,7 @@ padding: 39px 20px 18px !important; text-align: center; border-right: #ededed 1p
 .bmenusturisticos a{background-image:url('img/home/menu-icon_sitios.png'); background-repeat: no-repeat;
  background-position: 65px 15px; border-top: solid 3px #7acf77;}
  	.bmenusturisticos a:hover{background-color: #7acf77;}
+.translate{position: absolute; right: 0; z-index: 9999; width: 400px;}
 
 /*------ Search ------ */
 .boletosdebussearch{ position: absolute; z-index: 100; opacity: 0.83; padding: 10px 10px 10px 25px;

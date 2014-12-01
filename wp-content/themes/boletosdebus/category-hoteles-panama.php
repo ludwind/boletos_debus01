@@ -91,9 +91,9 @@ get_header(); ?>
 
 <!-- ----------------- autos para tu viaje -------------------------- -->
 <div class="mejoreshoteles">
-	<h1>Autos en El Salvador</h1><div class="linea-horizontal"></div>
+	<h1>Autos en Panam&aacute;</h1><div class="linea-horizontal"></div>
 <ul><?php
-$args = array( 'posts_per_page' => 3, 'offset'=> 0, 'category' => 27 );
+$args = array( 'posts_per_page' => 3, 'offset'=> 0, 'category' => 33 );
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <li><a href="<?php the_permalink(); ?>">
@@ -106,14 +106,14 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 </a></li>
 <?php endforeach; wp_reset_postdata();?>
 </ul>
-<a href="?cat=27" class="vertodos">ver todos los autos</a>
+<a href="?cat=33" class="vertodos">ver todos los autos</a>
 </div>
 <!-- ----------------- Fin Los mejores hoteles ---------------------- -->
 
 <!-- ----------------- Top sitios turisticos -------------------------- -->
 <div class="top-sitiosturisticos">
 	<h1>Top sitio tur&iacute;sticos</h1><div class="linea-horizontal"></div>
-<ul><?php $args = array( 'posts_per_page' => 7, 'offset'=> 0, 'category' => 21 );
+<ul><?php $args = array( 'posts_per_page' => 7, 'offset'=> 0, 'category' => 36 );
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <li><a href="<?php the_permalink(); ?>">
@@ -125,7 +125,7 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 <div class="linea-horizontal lineatopsitios"></div>
 <?php endforeach; wp_reset_postdata();?>
 </ul>
-<a href="?cat=21" class="vertodos2">ver todos los sitios turisticos</a>
+<a href="?cat=36" class="vertodos2">ver todos los sitios turisticos</a>
 </div>
 <!-- ----------------- Fin Los mejores hoteles ---------------------- -->
 <div class="espaciadorhome"></div>

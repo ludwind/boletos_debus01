@@ -43,7 +43,6 @@
 do_action( 'adventurous_before' ); ?>
 
 <div id="page" class="hfeed site">
-
 	<?php 
     /** 
      * adventurous_before_header hook
@@ -89,6 +88,8 @@ do_action( 'adventurous_before' ); ?>
      * adventurous_after_header hook
      */
     do_action( 'adventurous_after_header' ); ?>
+    
+<div class="translate"><?php echo do_shortcode('[google-translator]'); ?></div>
 
     
 <?php if(is_page(39)): ?>

@@ -5,7 +5,7 @@
  * @package Catch Themes
  * @subpackage Adventurous
  * @since Adventurous 1.0
- WP Post Template: Hoteles Nicaragua
+ WP Post Template: Hoteles Costa Rica
  */
 
 get_header(); ?>
@@ -22,7 +22,7 @@ get_header(); ?>
                      */
                     //get_template_part( 'content', get_post_format() );
 					$postformat = ( get_post_format() ? get_post_format() : 'single' );
-					get_template_part( 'content_hoteles-nicaragua', $postformat );
+					get_template_part( 'content_hoteles-costarica', $postformat );
                 ?>
 
 
